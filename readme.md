@@ -1,6 +1,6 @@
 # Studhelper 
 ## Функциональные требования (User Story)
-![User Story](https://github.com/Danila-Developer/studhelper/blob/main/screens/Screenshot_1.png)
+![User Story](https://github.com/Danila-Developer/studhelper/blob/main/screens/Screenshot_7.png)
 
 ## Макет
 ![User Story](https://github.com/Danila-Developer/studhelper/blob/main/screens/Screenshot_2.png)
