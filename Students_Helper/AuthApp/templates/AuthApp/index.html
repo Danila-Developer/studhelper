@@ -1,0 +1,81 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE">
+    <meta http-equiv="Expires" content="-1">
+    <meta HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <title>Student's helper</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="{% static 'AuthApp/styles/style.css' %}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+</head>
+<body>
+    <nav class="nav">
+        <div class="container">
+            <ul class="nav-container">
+                  <li id ="auth" class="nav-block"><a href="#">Вход</a></li>
+                  <li id = "registration" class="nav-block"><a href="#">Регистрация</a></li>
+                </div>
+            </ul>
+        </div>
+    </nav>
+
+    {% if messages %}
+        {% for message in messages %}
+            {% if message.tags == 'error' %}
+                <div class="alert alert-danger" role="alert">{{ message }}</div>
+            {% else %}
+                <div class="alert alert-{{ message.tags }}" role="alert">{{ message }}</div>
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+
+    <div class="info">
+       <div class="container">
+          <h2 class="info-content">
+            Добро пожаловать в цифровой<br/>помощник студента РТУ МИРЭА
+          </h2>
+       </div>
+    </div>
+
+    <div class="popap-reg">
+       <div class="popap-reg-content">
+          <h2>Регистрация</h2>
+          <img id="close-reg" src="{% static 'AuthApp/icons/close.png' %}" alt="" class="close">
+          <span>Заполните необходимые данные</span>
+           <form method="post">
+               {% csrf_token %}
+                   {{ form }}
+               <div class="button-container">
+                <input class="button" id="button-reg" type="submit" value="Зарегестрироваться">
+                </div>
+           </form>
+
+
+
+       </div>
+    </div>
+
+    <div class="popap-auth">
+      <div class="popap-auth-content">
+         <h2>Вход</h2>
+         <img id="close-auth" src="{% static 'AuthApp/icons/close.png' %}" alt="" class="close">
+         <span>Заполните необходимые данные</span>
+         <input type="email" placeholder="E-mail">
+         <input type="password" placeholder="Пароль">
+         <div class="button-container">
+           <a id="button" class="button" href="#">Войти</a>
+         </div>
+      </div>
+   </div>
+
+    <script src="{% static 'AuthApp/script.js' %}"></script>
+
+</body>
+</html>
