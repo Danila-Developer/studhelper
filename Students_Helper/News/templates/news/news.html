@@ -16,6 +16,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 </head>
 <body>
+    {% if request.user.is_authenticated %}
     <nav class="nav">
         <div class="container">
             <ul class="nav-container">
@@ -24,8 +25,8 @@
                 <li class="nav-block"><a href="#">Дисциплины</a></li>
                 <div class="nav-block user">
                     <div class="user-container">
-                        <div class="user-block name">Истомин Т.</div>
-                        <div class="user-block icon"><a href="#"><img src="{% static 'news/icons/icon-exit.png' %}" alt=""></a></div>
+                        <div class="user-block name">{{ user.username }}</div>
+                        <div class="user-block icon"><a href="{% url 'logout' %}"><img src="{% static 'news/icons/icon-exit.png' %}" alt=""></a></div>
                 </div>
                 </li>
             </ul>
@@ -49,12 +50,19 @@
                 </div>
             </article>
             {% endfor %}
-            
-
 
         </div>
     </section>
-
-
+    {% else %}
+        <div class="alert-container">
+            <div class="cancel-alert">
+                <div class="alert-content">
+                    <h2>Упс, что-то пошло не так...</h2>
+                    <p>Зарегестрируйтесь или пройдите авторизацию
+                     для доступа к этой части контента</p>
+                </div>
+            </div>
+        </div>
+    {% endif %}
 </body>
 </html>

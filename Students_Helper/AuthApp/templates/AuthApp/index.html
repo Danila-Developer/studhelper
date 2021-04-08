@@ -16,6 +16,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 </head>
 <body>
+
+
     <nav class="nav">
         <div class="container">
             <ul class="nav-container">
@@ -51,7 +53,7 @@
           <span>Заполните необходимые данные</span>
            <form method="post">
                {% csrf_token %}
-                   {{ form }}
+                   {{ reg_form }}
                <div class="button-container">
                 <input class="button" id="button-reg" type="submit" value="Зарегестрироваться">
                 </div>
@@ -67,11 +69,14 @@
          <h2>Вход</h2>
          <img id="close-auth" src="{% static 'AuthApp/icons/close.png' %}" alt="" class="close">
          <span>Заполните необходимые данные</span>
-         <input type="email" placeholder="E-mail">
-         <input type="password" placeholder="Пароль">
-         <div class="button-container">
-           <a id="button" class="button" href="#">Войти</a>
-         </div>
+          <form method="post">
+               {% csrf_token %}
+                   {{ auth_form }}
+               <div class="button-container">
+                <input class="button" id="button-reg" type="submit" value="Войти">
+                </div>
+           </form>
+
       </div>
    </div>
 

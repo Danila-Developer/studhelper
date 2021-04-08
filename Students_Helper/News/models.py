@@ -5,6 +5,7 @@ from django.db import models
 class News(models.Model):
     title = models.CharField(max_length=50, verbose_name='Заголовок')
     content = models.TextField(verbose_name='Содержание')
+    group = models.CharField(max_length=12, verbose_name='Группа')
     image = models.ImageField(upload_to='photos/%Y/%m', verbose_name='Изображение')
     created_at = models.DateField(auto_now_add=True)
     update_at = models.DateField(auto_now=True)

@@ -117,3 +117,26 @@
    margin-left:auto;
    margin-bottom: 0;
 }
+
+.alert-container{
+   display: flex;
+   justify-content: center;
+   position: relative;
+}
+
+.cancel-alert{
+   position: absolute;
+   display: block;
+   margin: 0 auto;
+   width: 550px;
+   min-height: 200px;
+   background-color: #F0F0F0;
+   border: #109CEB solid 2px;
+   top: 100px;
+   padding: 10px 30px;
+}
+
+.alert_content{
+   font-family: 'Roboto', sans-serif;
+
+}
