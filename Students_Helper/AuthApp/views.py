@@ -4,10 +4,11 @@ from django.contrib import messages
 from .forms import UserRegisterForm, UserLoginForm
 from django.contrib.auth import login, logout
 
+# exit
 def user_logout(request):
     logout(request)
     return redirect('/')
-
+# er
 def index(request):
     if request.method == 'POST':
         auth_form = UserLoginForm(data=request.POST)
@@ -21,7 +22,7 @@ def index(request):
     else:
         auth_form = UserLoginForm()
 
-
+# reg
     if request.method == 'POST':
         reg_form = UserRegisterForm(request.POST)
         if reg_form.is_valid():
