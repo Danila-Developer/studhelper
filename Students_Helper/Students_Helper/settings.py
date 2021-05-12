@@ -72,7 +72,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'Students_Helper.wsgi.application'
 
-
+#updated
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
