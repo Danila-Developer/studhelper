@@ -3,6 +3,7 @@
 ![User Story](https://github.com/Danila-Developer/studhelper/blob/main/screens/Screenshot_7.png)
 
 ## Пользовательская инструкция
+### Добавление расписания для курса
 
 ## Макет
 ![User Story](https://github.com/Danila-Developer/studhelper/blob/main/screens/Screenshot_2.png)
