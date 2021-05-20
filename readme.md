@@ -2,6 +2,8 @@
 ## Функциональные требования (User Story)
 ![User Story](https://github.com/Danila-Developer/studhelper/blob/main/screens/Screenshot_7.png)
 
+## Пользовательская инструкция
+
 ## Макет
 ![User Story](https://github.com/Danila-Developer/studhelper/blob/main/screens/Screenshot_2.png)
 
