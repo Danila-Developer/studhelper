@@ -5,9 +5,6 @@
 1. Установить python версии 3 и выше, скачав его с официального сайта (https://www.python.org/downloads/)
 2. Клонировать репозиторий на локальную машину
 3. В cmd необходимо зайти в директорию с проектом, после чего прописать команду python manage.py runserver, после чего локально будет запущен сайт
-## Функциональные требования (User Story)
-![User Story](https://github.com/Danila-Developer/studhelper/blob/main/screens/Screenshot_7.png)
-
 ## Пользовательская инструкция
 ### Добавление расписания для курса
 1. Скачать excel-файл с расписанием необходимого курса с официального сайта РТУ МИРЭА
@@ -24,6 +21,8 @@
 3. Нажать на кнопку "Добавить новость"
 4. Заполнить необходимые данные о новости
 5. Сохранить запись, после чего новость будет успешно добавлена
+## Функциональные требования (User Story)
+![User Story](https://github.com/Danila-Developer/studhelper/blob/main/screens/Screenshot_7.png)
 ## Макет
 ![User Story](https://github.com/Danila-Developer/studhelper/blob/main/screens/Screenshot_2.png)
 
