@@ -4,7 +4,7 @@
 
 ## Пользовательская инструкция
 ### Добавление расписания для курса
-
+1. Скачать excel-файл с расписанием необходимого курса с официального сайта РТУ МИРЭА
 ## Макет
 ![User Story](https://github.com/Danila-Developer/studhelper/blob/main/screens/Screenshot_2.png)
 
